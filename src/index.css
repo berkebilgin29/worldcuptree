@@ -303,9 +303,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .third-place-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 24px;
 }
 
@@ -1082,7 +1082,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 14px;
   }
   .third-place-list {
-    grid-template-columns: 1fr;
     gap: 10px;
   }
 }
