@@ -1,0 +1,26 @@
+# WorldCupTree Proje Yapılacaklar Listesi (task.md)
+
+- [x] Proje Ortamının Kurulması ve Altyapı
+  - [x] Vite + React projesinin oluşturulması
+  - [x] Temel bağımlılıklerin yüklenmesi (`lucide-react`, `html-to-image`)
+  - [x] Gereksiz şablon dosyalarının temizlenmesi
+- [x] Dil Desteği ve Veri Katmanı
+  - [x] TR/EN dil yönetimi için Context oluşturulması (`LanguageContext.jsx`)
+  - [x] 2026 Dünya Kupası grup ve takım verilerinin hazırlanması (`teams.json`)
+  - [x] Son 32 dinamik eşleştirme algoritmasının projeye entegre edilmesi (`matching.js`)
+- [x] Tasarım Sistemi ve Temel Arayüz
+  - [x] Premium CSS Tasarım tokens, neon renk şeması, stadyum efektleri (`index.css`)
+  - [x] Üst Bilgi (Header) ve Alt Bilgi (Footer) bileşenlerinin kodlanması
+- [x] Tahmin Aşamaları Arayüzü
+  - [x] Grup Aşaması (Group Stage) sıralama arayüzü (12 grup kartı)
+  - [x] En İyi Üçüncüler Seçim ekranı (Kullanıcının 8 takım seçmesi)
+  - [x] Son 32 - Final Eleme Ağacı (Knockout Bracket) interaktif tasarımı
+- [x] Paylaşım ve Kayıt Özellikleri
+  - [x] Tarayıcı Local Storage entegrasyonu (Tahminlerin kaybolmaması için)
+  - [x] Paylaşım Kartı (Share Card) bileşeni ve PNG olarak indirme işlevi (`html-to-image`)
+  - [x] Paylaşım Kartındaki maç listesini simetrik turnuva ağacı yapısına (Round of 16 -> Final) dönüştürme
+  - [x] Ülkelerin 3 harfli FIFA kısaltma kodlarının (TEAM_CODES) eklenmesi ve entegrasyonu
+  - [x] CSS'te turnuva ağacı yapısı ve mobil ölçekleme için kuralların tanımlanması
+- [x] Kontroller ve Yayına Hazırlık
+  - [x] Projenin build edilmesi ve derleme hatalarının giderilmesi
+  - [x] Mobil uyumluluk ve performans kontrolleri
