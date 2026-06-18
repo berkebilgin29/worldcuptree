@@ -9,7 +9,7 @@ const SLOT_MAPPING = {
 export default function AdSlot({ slot = '1234567890', format = 'auto', responsive = 'true', style = {} }) {
   const { lang } = useLanguage();
   
-  const clientID = import.meta.env.VITE_ADSENSE_CLIENT || 'ca-pub-1234567890123456';
+  const clientID = import.meta.env.VITE_ADSENSE_CLIENT || 'ca-pub-8383331067880574';
   const resolvedSlot = SLOT_MAPPING[slot] || slot;
 
   useEffect(() => {
