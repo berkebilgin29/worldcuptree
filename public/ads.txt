@@ -1,0 +1,2 @@
+# Google AdSense ads.txt for worldcuptree.com
+google.com, pub-8383331067880574, DIRECT, f08c47fec0942fa0

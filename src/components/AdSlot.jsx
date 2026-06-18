@@ -1,8 +1,16 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
+const SLOT_MAPPING = {
+  'landing-bottom-ad': import.meta.env.VITE_ADSENSE_SLOT_LANDING || '1234567890',
+  'wizard-bottom-ad': import.meta.env.VITE_ADSENSE_SLOT_WIZARD || '0987654321',
+};
+
 export default function AdSlot({ slot = '1234567890', format = 'auto', responsive = 'true', style = {} }) {
   const { lang } = useLanguage();
+  
+  const clientID = import.meta.env.VITE_ADSENSE_CLIENT || 'ca-pub-1234567890123456';
+  const resolvedSlot = SLOT_MAPPING[slot] || slot;
 
   useEffect(() => {
     try {
@@ -13,7 +21,7 @@ export default function AdSlot({ slot = '1234567890', format = 'auto', responsiv
     } catch (e) {
       console.warn("AdSense script load warning:", e);
     }
-  }, []);
+  }, [resolvedSlot]);
 
   return (
     <div className="ad-wrapper-container" style={style}>
@@ -25,8 +33,8 @@ export default function AdSlot({ slot = '1234567890', format = 'auto', responsiv
         <ins 
           className="adsbygoogle"
           style={{ display: 'block', minHeight: '90px' }}
-          data-ad-client="ca-pub-1234567890123456" // Replace with your publisher ca-pub ID
-          data-ad-slot={slot}
+          data-ad-client={clientID}
+          data-ad-slot={resolvedSlot}
           data-ad-format={format}
           data-full-width-responsive={responsive}
         />
