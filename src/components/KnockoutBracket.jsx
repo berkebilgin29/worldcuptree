@@ -112,6 +112,20 @@ export default function KnockoutBracket({
   const containerRef = React.useRef(null);
   const [svgPaths, setSvgPaths] = useState([]);
 
+  const scrollToSection = (section) => {
+    const container = containerRef.current;
+    if (!container) return;
+    
+    if (section === 'left') {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (section === 'center') {
+      const centerScroll = (container.scrollWidth - container.clientWidth) / 2;
+      container.scrollTo({ left: centerScroll, behavior: 'smooth' });
+    } else if (section === 'right') {
+      container.scrollTo({ left: container.scrollWidth - container.clientWidth, behavior: 'smooth' });
+    }
+  };
+
   const selectWinner = (matchId, team) => {
     if (!team || team.isPlaceholder) return;
     
@@ -374,7 +388,7 @@ export default function KnockoutBracket({
         </p>
 
         {/* Local mod: "Bizim Yol" Mode Button */}
-        <div style={{ marginTop: '16px' }}>
+        <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
           <button 
             className="lang-btn" 
             style={{ 
@@ -388,12 +402,25 @@ export default function KnockoutBracket({
           >
             🇹🇷 {t('ourPathMode')}
           </button>
+
+          {/* Mobile Bracket Navigation Buttons */}
+          <div className="mobile-bracket-navigator">
+            <button className="mobile-nav-btn" onClick={() => scrollToSection('left')}>
+              ⬅️ {lang === 'tr' ? 'Sol Taraf (A)' : 'Left Side'}
+            </button>
+            <button className="mobile-nav-btn" onClick={() => scrollToSection('center')}>
+              🏆 {lang === 'tr' ? 'Final & Şampiyon' : 'Final'}
+            </button>
+            <button className="mobile-nav-btn" onClick={() => scrollToSection('right')}>
+              {lang === 'tr' ? 'Sağ Taraf (B)' : 'Right Side'} ➡️
+            </button>
+          </div>
         </div>
 
         {/* Mobile Swipe Info Badge */}
-        <div className="mobile-scroll-helper" style={{ marginTop: '16px', display: 'none' }}>
+        <div className="mobile-scroll-helper" style={{ marginTop: '16px' }}>
           <span style={{ fontSize: '0.8rem', color: 'var(--color-secondary)', display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 14px', borderRadius: '30px', background: 'rgba(245, 158, 11, 0.08)', border: '1px solid rgba(245, 158, 11, 0.2)', fontWeight: '600' }}>
-            👉 {lang === 'tr' ? 'Ağacı parmağınızla sağa/sola kaydırın' : 'Swipe left/right to view full bracket'} ➔
+            👉 {lang === 'tr' ? 'Ağacı sağa/sola kaydırabilir veya yukarıdaki butonları kullanabilirsiniz' : 'Swipe left/right or use the buttons above to view'} ➔
           </span>
         </div>
       </div>
