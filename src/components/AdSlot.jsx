@@ -12,7 +12,10 @@ export default function AdSlot({ slot = '1234567890', format = 'auto', responsiv
   const clientID = import.meta.env.VITE_ADSENSE_CLIENT || 'ca-pub-8383331067880574';
   const resolvedSlot = SLOT_MAPPING[slot] || slot;
 
+  const isDummy = resolvedSlot === '1234567890' || resolvedSlot === '0987654321';
+
   useEffect(() => {
+    if (isDummy) return;
     try {
       // Safely invoke Google Ads script
       if (typeof window !== 'undefined') {
@@ -21,7 +24,11 @@ export default function AdSlot({ slot = '1234567890', format = 'auto', responsiv
     } catch (e) {
       console.warn("AdSense script load warning:", e);
     }
-  }, [resolvedSlot]);
+  }, [resolvedSlot, isDummy]);
+
+  if (isDummy) {
+    return null;
+  }
 
   return (
     <div className="ad-wrapper-container" style={style}>
