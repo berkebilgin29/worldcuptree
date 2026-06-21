@@ -71,15 +71,15 @@ export default function ThirdPlaceSelector({ standings, selectedThirdPlaces, set
         {/* Table Header */}
         <div className="group-table-header third-place-table-header" style={{ marginBottom: '8px', padding: '10px 16px' }}>
           <span className="col-rank">#</span>
-          <span className="col-group" style={{ fontSize: '0.75rem' }}>{lang === 'tr' ? 'Grup' : 'Group'}</span>
-          <span className="col-team" style={{ fontSize: '0.75rem' }}>{lang === 'tr' ? 'Takım' : 'Team'}</span>
-          <span className="col-stat">O</span>
-          <span className="col-stat">G</span>
-          <span className="col-stat">B</span>
-          <span className="col-stat">M</span>
-          <span className="col-stat">AV</span>
-          <span className="col-stat">P</span>
-          <span className="col-select-header" style={{ fontSize: '0.75rem', textAlign: 'center' }}>{lang === 'tr' ? 'Seç' : 'Select'}</span>
+          <span className="col-group" style={{ fontSize: '0.75rem' }}>{lang === 'tr' ? 'Grup' : (lang === 'de' ? 'Gruppe' : 'Group')}</span>
+          <span className="col-team" style={{ fontSize: '0.75rem' }}>{t('teamCol')}</span>
+          <span className="col-stat" title={t('playedTooltip')}>{t('playedCol')}</span>
+          <span className="col-stat" title={t('wonTooltip')}>{t('wonCol')}</span>
+          <span className="col-stat" title={t('drawnTooltip')}>{t('drawnCol')}</span>
+          <span className="col-stat" title={t('lostTooltip')}>{t('lostCol')}</span>
+          <span className="col-stat" title={t('gdTooltip')}>{t('gdCol')}</span>
+          <span className="col-stat" title={t('pointsTooltip')}>{t('pointsCol')}</span>
+          <span className="col-select-header" style={{ fontSize: '0.75rem', textAlign: 'center' }}>{lang === 'tr' ? 'Seç' : (lang === 'de' ? 'Wählen' : 'Select')}</span>
         </div>
 
         {sortedThirdPlaces.map(({ group, team, stats }, idx) => {
@@ -120,7 +120,7 @@ export default function ThirdPlaceSelector({ standings, selectedThirdPlaces, set
                     e.stopPropagation();
                     onOpenSquad(team);
                   }}
-                  title={lang === 'tr' ? 'Kadro & Piyasa Değerleri' : 'Squad & Market Values'}
+                  title={t('squadAndMarketValues')}
                   style={{
                     background: 'transparent',
                     border: 'none',

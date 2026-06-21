@@ -7,7 +7,7 @@ const SLOT_MAPPING = {
 };
 
 export default function AdSlot({ slot = '1234567890', format = 'auto', responsive = 'true', style = {} }) {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   
   const clientID = import.meta.env.VITE_ADSENSE_CLIENT || 'ca-pub-8383331067880574';
   const resolvedSlot = SLOT_MAPPING[slot] || slot;
@@ -33,7 +33,7 @@ export default function AdSlot({ slot = '1234567890', format = 'auto', responsiv
   return (
     <div className="ad-wrapper-container" style={style}>
       <div className="ad-label">
-        {lang === 'tr' ? 'SPONSORLU BAĞLANTI' : 'ADVERTISEMENT'}
+        {t('advertisement')}
       </div>
       <div className="ad-box">
         {/* Placeholder/Live Google AdSense ins tag */}

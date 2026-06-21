@@ -38,7 +38,7 @@ export default function Header({ onReset, isSimulating, onStartSim, onCancelSim 
 
         <button className="lang-btn flex-center gap-2" onClick={toggleLanguage}>
           <Globe size={16} style={{ marginRight: '6px' }} />
-          <span>{lang === 'en' ? 'TR' : 'EN'}</span>
+          <span>{lang.toUpperCase()}</span>
         </button>
 
         <button className="lang-btn flex-center gap-2" onClick={onReset} title={t('resetBtn')}>

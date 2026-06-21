@@ -30,7 +30,8 @@ const RATINGS = {
   england: 94, croatia: 87, ghana: 74, panama: 66
 };
 
-function FinalCountdown({ lang }) {
+function FinalCountdown() {
+  const { lang, t } = useLanguage();
   const [timeLeft, setTimeLeft] = useState(null);
 
   useEffect(() => {
@@ -62,31 +63,31 @@ function FinalCountdown({ lang }) {
     <div className="final-countdown-container">
       <div className="countdown-badge">
         <span className="badge-glow"></span>
-        <span className="badge-text">{lang === 'tr' ? 'BÜYÜK FİNAL YOLU CANLI' : 'ROAD TO GRANDE FINAL LIVE'}</span>
+        <span className="badge-text">{t('roadToFinalLive')}</span>
       </div>
       <div className="countdown-timer">
         {timeLeft.ended ? (
-          <div className="ended-text">{lang === 'tr' ? 'FİNAL GÜNÜ BAŞLADI!' : 'FINAL DAY IS HERE!'}</div>
+          <div className="ended-text">{t('finalDayIsHere')}</div>
         ) : (
           <div className="timer-segments">
             <div className="segment">
               <span className="segment-value">{timeLeft.days}</span>
-              <span className="segment-label">{lang === 'tr' ? 'GÜN' : 'DAYS'}</span>
+              <span className="segment-label">{t('days')}</span>
             </div>
             <div className="segment-sep">:</div>
             <div className="segment">
               <span className="segment-value">{String(timeLeft.hours).padStart(2, '0')}</span>
-              <span className="segment-label">{lang === 'tr' ? 'SAAT' : 'HOURS'}</span>
+              <span className="segment-label">{t('hours')}</span>
             </div>
             <div className="segment-sep">:</div>
             <div className="segment">
               <span className="segment-value">{String(timeLeft.minutes).padStart(2, '0')}</span>
-              <span className="segment-label">{lang === 'tr' ? 'DAKİKA' : 'MINS'}</span>
+              <span className="segment-label">{t('minutes')}</span>
             </div>
             <div className="segment-sep">:</div>
             <div className="segment">
               <span className="segment-value">{String(timeLeft.seconds).padStart(2, '0')}</span>
-              <span className="segment-label">{lang === 'tr' ? 'SANİYE' : 'SECS'}</span>
+              <span className="segment-label">{t('seconds')}</span>
             </div>
           </div>
         )}
@@ -155,7 +156,7 @@ export default function App() {
   }, [predictions, isSimulating]);
 
   const handleReset = () => {
-    if (window.confirm(lang === 'tr' ? 'Tüm tahminleriniz sıfırlanacaktır. Emin misiniz?' : 'All predictions will be reset. Are you sure?')) {
+    if (window.confirm(t('resetConfirm'))) {
       isSimulatingRef.current = false;
       setIsSimulating(false);
       setStandings(getSortedInitialGroups());
@@ -412,7 +413,7 @@ export default function App() {
             <span>
               {lang === 'tr' 
                 ? 'YAPAY ZEKA TAHMİN SİMÜLASYONU ÇALIŞIYOR... LÜTFEN BEKLEYİN.' 
-                : 'AI PREDICTION SIMULATION IN PROGRESS... PLEASE WAIT.'}
+                : (lang === 'de' ? 'KI-PROGNOSE-SIMULATION LÄUFT... BITTE WARTEN.' : 'AI PREDICTION SIMULATION IN PROGRESS... PLEASE WAIT.')}
             </span>
           </div>
         )}
@@ -429,35 +430,35 @@ export default function App() {
             </h1>
             <p className="hero-subtitle">{t('heroSubtitle')}</p>
             
-            <FinalCountdown lang={lang} />
+            <FinalCountdown />
             
             <div className="step-cards-grid" style={{ marginBottom: '40px' }}>
               <div className="step-card">
                 <div className="step-card-num">1</div>
-                <div className="step-card-title">{lang === 'tr' ? '12 Grubu Sırala' : 'Rank 12 Groups'}</div>
+                <div className="step-card-title">{t('rankTwelveGroups')}</div>
                 <div className="step-card-desc">
-                  {lang === 'tr' ? 'Takımları oklarla aşağı/yukarı taşıyarak grupları belirle' : 'Move teams up or down to set group standings'}
+                  {t('rankTwelveGroupsDesc')}
                 </div>
               </div>
               <div className="step-card">
                 <div className="step-card-num">2</div>
-                <div className="step-card-title">{lang === 'tr' ? 'Üçüncüleri Seç' : 'Choose Best 3rds'}</div>
+                <div className="step-card-title">{t('chooseBestThirds')}</div>
                 <div className="step-card-desc">
-                  {lang === 'tr' ? 'Tur atlayacak en iyi 8 üçüncü takımı seçerek elemelere taşı' : 'Select the 8 best third-place wildcards to advance'}
+                  {t('chooseBestThirdsDesc')}
                 </div>
               </div>
               <div className="step-card">
                 <div className="step-card-num">3</div>
-                <div className="step-card-title">{lang === 'tr' ? 'Ağacı Tahmin Et' : 'Bracket Predictor'}</div>
+                <div className="step-card-title">{t('bracketPredictorTitle')}</div>
                 <div className="step-card-desc">
-                  {lang === 'tr' ? 'Son 32 turundan finale kadar eleme eşleşmelerini tahmin et' : 'Predict bracket matchups from Round of 32 to final'}
+                  {t('bracketPredictorDesc')}
                 </div>
               </div>
               <div className="step-card">
                 <div className="step-card-num">4</div>
-                <div className="step-card-title">{lang === 'tr' ? 'Kartını İndir' : 'Download Card'}</div>
+                <div className="step-card-title">{t('downloadCardTitle')}</div>
                 <div className="step-card-desc">
-                  {lang === 'tr' ? 'Tahmin ağacını şık bir görsel kart olarak indir ve paylaş' : 'Save and share your bracket prediction as a premium PNG'}
+                  {t('downloadCardDesc')}
                 </div>
               </div>
             </div>
@@ -499,28 +500,28 @@ export default function App() {
                 onClick={() => jumpToStep(1)}
                 data-step="1"
               >
-                <span>{lang === 'tr' ? '1. Gruplar' : '1. Groups'}</span>
+                <span>{t('stepGroups')}</span>
               </div>
               <div 
                 className={`step-bubble ${step === 2 ? 'active' : ''}`} 
                 onClick={() => jumpToStep(2)}
                 data-step="2"
               >
-                <span>{lang === 'tr' ? '2. Üçüncüler' : '2. Thirds'}</span>
+                <span>{t('stepThirds')}</span>
               </div>
               <div 
                 className={`step-bubble ${step === 3 ? 'active' : ''}`} 
                 onClick={() => jumpToStep(3)}
                 data-step="3"
               >
-                <span>{lang === 'tr' ? '3. Elemeler' : '3. Bracket'}</span>
+                <span>{t('stepBracket')}</span>
               </div>
               <div 
                 className={`step-bubble ${step === 4 ? 'active' : ''}`} 
                 onClick={() => jumpToStep(4)}
                 data-step="4"
               >
-                <span>{lang === 'tr' ? '4. İndir' : '4. Share'}</span>
+                <span>{t('stepShare')}</span>
               </div>
             </div>
 

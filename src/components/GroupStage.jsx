@@ -53,7 +53,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
             style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', padding: '6px 14px' }}
           >
             <List size={13} />
-            <span>{lang === 'tr' ? 'Liste Görünümü' : 'List View'}</span>
+            <span>{t('listView')}</span>
           </button>
           <button 
             className={`selector-btn ${viewMode === 'table' ? 'active' : ''}`}
@@ -61,7 +61,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
             style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', padding: '6px 14px' }}
           >
             <TableProperties size={13} />
-            <span>{lang === 'tr' ? 'Canlı Puan Durumu' : 'Live Standings'}</span>
+            <span>{t('liveStandings')}</span>
           </button>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
             <div className="group-header">
               <span className="group-name">GROUP {groupLetter}</span>
               <span className="group-sub" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>
-                GRUP {groupLetter}
+                {lang === 'tr' ? 'GRUP' : (lang === 'de' ? 'GRUPPE' : 'GROUP')} {groupLetter}
               </span>
             </div>
 
@@ -81,13 +81,13 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
               <div className="group-team-list">
                 <div className="group-table-header">
                   <span className="col-rank">#</span>
-                  <span className="col-team">{lang === 'tr' ? 'Takım' : 'Team'}</span>
-                  <span className="col-stat" title={lang === 'tr' ? 'Oynanan' : 'Played'}>O</span>
-                  <span className="col-stat" title={lang === 'tr' ? 'Galibiyet' : 'Won'}>G</span>
-                  <span className="col-stat" title={lang === 'tr' ? 'Beraberlik' : 'Drawn'}>B</span>
-                  <span className="col-stat" title={lang === 'tr' ? 'Mağlubiyet' : 'Lost'}>M</span>
-                  <span className="col-stat" title={lang === 'tr' ? 'Averaj' : 'Goal Difference'}>AV</span>
-                  <span className="col-stat" title={lang === 'tr' ? 'Puan' : 'Points'}>P</span>
+                  <span className="col-team">{t('teamCol')}</span>
+                  <span className="col-stat" title={t('playedTooltip')}>{t('playedCol')}</span>
+                  <span className="col-stat" title={t('wonTooltip')}>{t('wonCol')}</span>
+                  <span className="col-stat" title={t('drawnTooltip')}>{t('drawnCol')}</span>
+                  <span className="col-stat" title={t('lostTooltip')}>{t('lostCol')}</span>
+                  <span className="col-stat" title={t('gdTooltip')}>{t('gdCol')}</span>
+                  <span className="col-stat" title={t('pointsTooltip')}>{t('pointsCol')}</span>
                   <span className="col-actions"></span>
                 </div>
 
@@ -100,7 +100,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
                       <div 
                         className="col-team team-row-clickable" 
                         onClick={() => onOpenSquad(team)}
-                        title={lang === 'tr' ? 'Kadro & Değerleri Gör' : 'View Squad & Values'}
+                        title={t('viewSquadTooltip')}
                         style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}
                       >
                         <img 
@@ -160,7 +160,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
                       <div 
                         className="team-info team-row-clickable" 
                         onClick={() => onOpenSquad(team)}
-                        title={lang === 'tr' ? 'Kadro & Değerleri Gör' : 'View Squad & Values'}
+                        title={t('viewSquadTooltip')}
                       >
                         <span className="team-rank-num">{idx + 1}</span>
                         <img 

@@ -69,7 +69,7 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
             <div>
               <h3 className="modal-team-name">{team.name[lang]}</h3>
               <p className="modal-squad-value">
-                {lang === 'tr' ? 'Toplam Değer: ' : 'Total Value: '}
+                {lang === 'tr' ? 'Toplam Değer: ' : (lang === 'de' ? 'Gesamtmarktwert: ' : 'Total Value: ')}
                 <span className="value-glowing">€{squad.totalValue}M</span>
               </p>
             </div>
@@ -82,8 +82,8 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
         {/* Modal Content */}
         <div className="modal-body">
           <div className="squad-list-header">
-            <span>{lang === 'tr' ? 'Oyuncu / Kulüp' : 'Player / Club'}</span>
-            <span>{lang === 'tr' ? 'Değer' : 'Value'}</span>
+            <span>{lang === 'tr' ? 'Oyuncu / Kulüp' : (lang === 'de' ? 'Spieler / Verein' : 'Player / Club')}</span>
+            <span>{lang === 'tr' ? 'Değer' : (lang === 'de' ? 'Wert' : 'Value')}</span>
           </div>
 
           <div className="squad-list-scroll">
@@ -107,7 +107,7 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
         {/* Modal Footer */}
         <div className="modal-footer">
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            * {lang === 'tr' ? 'Piyasa değerleri Transfermarkt verileri esas alınarak hazırlanmıştır.' : 'Market values are based on Transfermarkt data.'}
+            * {lang === 'tr' ? 'Piyasa değerleri Transfermarkt verileri esas alınarak hazırlanmıştır.' : (lang === 'de' ? 'Die Marktwerte basieren auf Transfermarkt-Daten.' : 'Market values are based on Transfermarkt data.')}
           </span>
         </div>
       </div>

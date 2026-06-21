@@ -37,46 +37,47 @@ export default function KnockoutBracket({
   // Build the matches dynamically for subsequent rounds
   const getR16Matches = () => {
     return [
-      { id: 'R16_1', home: getMatchWinner('R32_1', r32Matches), away: getMatchWinner('R32_2', r32Matches), labelEn: 'Match 17', labelTr: 'Maç 17' },
-      { id: 'R16_2', home: getMatchWinner('R32_3', r32Matches), away: getMatchWinner('R32_4', r32Matches), labelEn: 'Match 18', labelTr: 'Maç 18' },
-      { id: 'R16_3', home: getMatchWinner('R32_5', r32Matches), away: getMatchWinner('R32_6', r32Matches), labelEn: 'Match 19', labelTr: 'Maç 19' },
-      { id: 'R16_4', home: getMatchWinner('R32_7', r32Matches), away: getMatchWinner('R32_8', r32Matches), labelEn: 'Match 20', labelTr: 'Maç 20' },
-      { id: 'R16_5', home: getMatchWinner('R32_9', r32Matches), away: getMatchWinner('R32_10', r32Matches), labelEn: 'Match 21', labelTr: 'Maç 21' },
-      { id: 'R16_6', home: getMatchWinner('R32_11', r32Matches), away: getMatchWinner('R32_12', r32Matches), labelEn: 'Match 22', labelTr: 'Maç 22' },
-      { id: 'R16_7', home: getMatchWinner('R32_13', r32Matches), away: getMatchWinner('R32_14', r32Matches), labelEn: 'Match 23', labelTr: 'Maç 23' },
-      { id: 'R16_8', home: getMatchWinner('R32_15', r32Matches), away: getMatchWinner('R32_16', r32Matches), labelEn: 'Match 24', labelTr: 'Maç 24' }
+      { id: 'R16_1', home: getMatchWinner('R32_1', r32Matches), away: getMatchWinner('R32_2', r32Matches), labelEn: 'Match 17', labelTr: 'Maç 17', labelDe: 'Spiel 17' },
+      { id: 'R16_2', home: getMatchWinner('R32_3', r32Matches), away: getMatchWinner('R32_4', r32Matches), labelEn: 'Match 18', labelTr: 'Maç 18', labelDe: 'Spiel 18' },
+      { id: 'R16_3', home: getMatchWinner('R32_5', r32Matches), away: getMatchWinner('R32_6', r32Matches), labelEn: 'Match 19', labelTr: 'Maç 19', labelDe: 'Spiel 19' },
+      { id: 'R16_4', home: getMatchWinner('R32_7', r32Matches), away: getMatchWinner('R32_8', r32Matches), labelEn: 'Match 20', labelTr: 'Maç 20', labelDe: 'Spiel 20' },
+      { id: 'R16_5', home: getMatchWinner('R32_9', r32Matches), away: getMatchWinner('R32_10', r32Matches), labelEn: 'Match 21', labelTr: 'Maç 21', labelDe: 'Spiel 21' },
+      { id: 'R16_6', home: getMatchWinner('R32_11', r32Matches), away: getMatchWinner('R32_12', r32Matches), labelEn: 'Match 22', labelTr: 'Maç 22', labelDe: 'Spiel 22' },
+      { id: 'R16_7', home: getMatchWinner('R32_13', r32Matches), away: getMatchWinner('R32_14', r32Matches), labelEn: 'Match 23', labelTr: 'Maç 23', labelDe: 'Spiel 23' },
+      { id: 'R16_8', home: getMatchWinner('R32_15', r32Matches), away: getMatchWinner('R32_16', r32Matches), labelEn: 'Match 24', labelTr: 'Maç 24', labelDe: 'Spiel 24' }
     ];
   };
-
+ 
   const r16Matches = getR16Matches();
-
+ 
   const getQFMatches = () => {
     return [
-      { id: 'QF_1', home: getMatchWinner('R16_1', r16Matches), away: getMatchWinner('R16_2', r16Matches), labelEn: 'Quarterfinal 1', labelTr: 'Çeyrek Final 1' },
-      { id: 'QF_2', home: getMatchWinner('R16_3', r16Matches), away: getMatchWinner('R16_4', r16Matches), labelEn: 'Quarterfinal 2', labelTr: 'Çeyrek Final 2' },
-      { id: 'QF_3', home: getMatchWinner('R16_5', r16Matches), away: getMatchWinner('R16_6', r16Matches), labelEn: 'Quarterfinal 3', labelTr: 'Çeyrek Final 3' },
-      { id: 'QF_4', home: getMatchWinner('R16_7', r16Matches), away: getMatchWinner('R16_8', r16Matches), labelEn: 'Quarterfinal 4', labelTr: 'Çeyrek Final 4' }
+      { id: 'QF_1', home: getMatchWinner('R16_1', r16Matches), away: getMatchWinner('R16_2', r16Matches), labelEn: 'Quarterfinal 1', labelTr: 'Çeyrek Final 1', labelDe: 'Viertelfinale 1' },
+      { id: 'QF_2', home: getMatchWinner('R16_3', r16Matches), away: getMatchWinner('R16_4', r16Matches), labelEn: 'Quarterfinal 2', labelTr: 'Çeyrek Final 2', labelDe: 'Viertelfinale 2' },
+      { id: 'QF_3', home: getMatchWinner('R16_5', r16Matches), away: getMatchWinner('R16_6', r16Matches), labelEn: 'Quarterfinal 3', labelTr: 'Çeyrek Final 3', labelDe: 'Viertelfinale 3' },
+      { id: 'QF_4', home: getMatchWinner('R16_7', r16Matches), away: getMatchWinner('R16_8', r16Matches), labelEn: 'Quarterfinal 4', labelTr: 'Çeyrek Final 4', labelDe: 'Viertelfinale 4' }
     ];
   };
-
+ 
   const qfMatches = getQFMatches();
-
+ 
   const getSFMatches = () => {
     return [
-      { id: 'SF_1', home: getMatchWinner('QF_1', qfMatches), away: getMatchWinner('QF_2', qfMatches), labelEn: 'Semifinal 1', labelTr: 'Yarı Final 1' },
-      { id: 'SF_2', home: getMatchWinner('QF_3', qfMatches), away: getMatchWinner('QF_4', qfMatches), labelEn: 'Semifinal 2', labelTr: 'Yarı Final 2' }
+      { id: 'SF_1', home: getMatchWinner('QF_1', qfMatches), away: getMatchWinner('QF_2', qfMatches), labelEn: 'Semifinal 1', labelTr: 'Yarı Final 1', labelDe: 'Halbfinale 1' },
+      { id: 'SF_2', home: getMatchWinner('QF_3', qfMatches), away: getMatchWinner('QF_4', qfMatches), labelEn: 'Semifinal 2', labelTr: 'Yarı Final 2', labelDe: 'Halbfinale 2' }
     ];
   };
-
+ 
   const sfMatches = getSFMatches();
-
+ 
   const getFinalMatch = () => {
     return {
       id: 'F_1',
       home: getMatchWinner('SF_1', sfMatches),
       away: getMatchWinner('SF_2', sfMatches),
       labelEn: 'Final',
-      labelTr: 'Final'
+      labelTr: 'Final',
+      labelDe: 'Finale'
     };
   };
 
@@ -328,7 +329,7 @@ export default function KnockoutBracket({
                 e.stopPropagation();
                 onOpenSquad(team);
               }}
-              title={lang === 'tr' ? 'Kadro & Piyasa Değerleri' : 'Squad & Market Values'}
+              title={t('squadAndMarketValues')}
               style={{
                 background: 'transparent',
                 border: 'none',
@@ -356,7 +357,7 @@ export default function KnockoutBracket({
     return (
       <div key={match.id} className="match-card" id={cardId}>
         <div className="match-info-label">
-          {lang === 'tr' ? match.labelTr : match.labelEn}
+          {lang === 'tr' ? match.labelTr : (lang === 'de' ? match.labelDe : match.labelEn)}
         </div>
         {renderTeamRow(match.home, isHomeSelected, 'home')}
         {renderTeamRow(match.away, isAwaySelected, 'away')}
@@ -406,13 +407,13 @@ export default function KnockoutBracket({
           {/* Mobile Bracket Navigation Buttons */}
           <div className="mobile-bracket-navigator">
             <button className="mobile-nav-btn" onClick={() => scrollToSection('left')}>
-              ⬅️ {lang === 'tr' ? 'Sol Taraf (A)' : 'Left Side'}
+              ⬅️ {t('leftSide')}
             </button>
             <button className="mobile-nav-btn" onClick={() => scrollToSection('center')}>
-              🏆 {lang === 'tr' ? 'Final & Şampiyon' : 'Final'}
+              🏆 {t('finalTitle')}
             </button>
             <button className="mobile-nav-btn" onClick={() => scrollToSection('right')}>
-              {lang === 'tr' ? 'Sağ Taraf (B)' : 'Right Side'} ➡️
+              {t('rightSide')} ➡️
             </button>
           </div>
         </div>
@@ -420,7 +421,7 @@ export default function KnockoutBracket({
         {/* Mobile Swipe Info Badge */}
         <div className="mobile-scroll-helper" style={{ marginTop: '16px' }}>
           <span style={{ fontSize: '0.8rem', color: 'var(--color-secondary)', display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 14px', borderRadius: '30px', background: 'rgba(245, 158, 11, 0.08)', border: '1px solid rgba(245, 158, 11, 0.2)', fontWeight: '600' }}>
-            👉 {lang === 'tr' ? 'Ağacı sağa/sola kaydırabilir veya yukarıdaki butonları kullanabilirsiniz' : 'Swipe left/right or use the buttons above to view'} ➔
+            👉 {t('swipeMessage')} ➔
           </span>
         </div>
       </div>

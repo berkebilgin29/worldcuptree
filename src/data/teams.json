@@ -1,76 +1,76 @@
 {
   "groups": {
     "A": [
-      { "id": "mexico", "name": { "en": "Mexico", "tr": "Meksika" }, "flag": "mx" },
-      { "id": "south_africa", "name": { "en": "South Africa", "tr": "Güney Afrika" }, "flag": "za" },
-      { "id": "south_korea", "name": { "en": "South Korea", "tr": "Güney Kore" }, "flag": "kr" },
-      { "id": "czech_republic", "name": { "en": "Czech Republic", "tr": "Çekya" }, "flag": "cz" }
+      { "id": "mexico", "name": { "en": "Mexico", "tr": "Meksika", "de": "Mexiko" }, "flag": "mx" },
+      { "id": "south_africa", "name": { "en": "South Africa", "tr": "Güney Afrika", "de": "Südafrika" }, "flag": "za" },
+      { "id": "south_korea", "name": { "en": "South Korea", "tr": "Güney Kore", "de": "Südkorea" }, "flag": "kr" },
+      { "id": "czech_republic", "name": { "en": "Czech Republic", "tr": "Çekya", "de": "Tschechien" }, "flag": "cz" }
     ],
     "B": [
-      { "id": "canada", "name": { "en": "Canada", "tr": "Kanada" }, "flag": "ca" },
-      { "id": "bosnia_herzegovina", "name": { "en": "Bosnia & Herz.", "tr": "Bosna Hersek" }, "flag": "ba" },
-      { "id": "qatar", "name": { "en": "Qatar", "tr": "Katar" }, "flag": "qa" },
-      { "id": "switzerland", "name": { "en": "Switzerland", "tr": "İsviçre" }, "flag": "ch" }
+      { "id": "canada", "name": { "en": "Canada", "tr": "Kanada", "de": "Kanada" }, "flag": "ca" },
+      { "id": "bosnia_herzegovina", "name": { "en": "Bosnia & Herz.", "tr": "Bosna Hersek", "de": "Bosnien & Herz." }, "flag": "ba" },
+      { "id": "qatar", "name": { "en": "Qatar", "tr": "Katar", "de": "Katar" }, "flag": "qa" },
+      { "id": "switzerland", "name": { "en": "Switzerland", "tr": "İsviçre", "de": "Schweiz" }, "flag": "ch" }
     ],
     "C": [
-      { "id": "brazil", "name": { "en": "Brazil", "tr": "Brezilya" }, "flag": "br" },
-      { "id": "morocco", "name": { "en": "Morocco", "tr": "Fas" }, "flag": "ma" },
-      { "id": "haiti", "name": { "en": "Haiti", "tr": "Haiti" }, "flag": "ht" },
-      { "id": "scotland", "name": { "en": "Scotland", "tr": "İskoçya" }, "flag": "gb-sct" }
+      { "id": "brazil", "name": { "en": "Brazil", "tr": "Brezilya", "de": "Brasilien" }, "flag": "br" },
+      { "id": "morocco", "name": { "en": "Morocco", "tr": "Fas", "de": "Marokko" }, "flag": "ma" },
+      { "id": "haiti", "name": { "en": "Haiti", "tr": "Haiti", "de": "Haiti" }, "flag": "ht" },
+      { "id": "scotland", "name": { "en": "Scotland", "tr": "İskoçya", "de": "Schottland" }, "flag": "gb-sct" }
     ],
     "D": [
-      { "id": "united_states", "name": { "en": "United States", "tr": "ABD" }, "flag": "us" },
-      { "id": "paraguay", "name": { "en": "Paraguay", "tr": "Paraguay" }, "flag": "py" },
-      { "id": "australia", "name": { "en": "Australia", "tr": "Avustralya" }, "flag": "au" },
-      { "id": "turkey", "name": { "en": "Türkiye", "tr": "Türkiye" }, "flag": "tr" }
+      { "id": "united_states", "name": { "en": "United States", "tr": "ABD", "de": "USA" }, "flag": "us" },
+      { "id": "paraguay", "name": { "en": "Paraguay", "tr": "Paraguay", "de": "Paraguay" }, "flag": "py" },
+      { "id": "australia", "name": { "en": "Australia", "tr": "Avustralya", "de": "Australien" }, "flag": "au" },
+      { "id": "turkey", "name": { "en": "Türkiye", "tr": "Türkiye", "de": "Türkei" }, "flag": "tr" }
     ],
     "E": [
-      { "id": "germany", "name": { "en": "Germany", "tr": "Almanya" }, "flag": "de" },
-      { "id": "curacao", "name": { "en": "Curaçao", "tr": "Curaçao" }, "flag": "cw" },
-      { "id": "ivory_coast", "name": { "en": "Ivory Coast", "tr": "Fildişi Sahili" }, "flag": "ci" },
-      { "id": "ecuador", "name": { "en": "Ecuador", "tr": "Ekvador" }, "flag": "ec" }
+      { "id": "germany", "name": { "en": "Germany", "tr": "Almanya", "de": "Deutschland" }, "flag": "de" },
+      { "id": "curacao", "name": { "en": "Curaçao", "tr": "Curaçao", "de": "Curaçao" }, "flag": "cw" },
+      { "id": "ivory_coast", "name": { "en": "Ivory Coast", "tr": "Fildişi Sahili", "de": "Elfenbeinküste" }, "flag": "ci" },
+      { "id": "ecuador", "name": { "en": "Ecuador", "tr": "Ekvador", "de": "Ecuador" }, "flag": "ec" }
     ],
     "F": [
-      { "id": "netherlands", "name": { "en": "Netherlands", "tr": "Hollanda" }, "flag": "nl" },
-      { "id": "japan", "name": { "en": "Japan", "tr": "Japonya" }, "flag": "jp" },
-      { "id": "ukraine", "name": { "en": "Ukraine", "tr": "Ukrayna" }, "flag": "ua" },
-      { "id": "tunisia", "name": { "en": "Tunisia", "tr": "Tunus" }, "flag": "tn" }
+      { "id": "netherlands", "name": { "en": "Netherlands", "tr": "Hollanda", "de": "Niederlande" }, "flag": "nl" },
+      { "id": "japan", "name": { "en": "Japan", "tr": "Japonya", "de": "Japan" }, "flag": "jp" },
+      { "id": "ukraine", "name": { "en": "Ukraine", "tr": "Ukrayna", "de": "Ukraine" }, "flag": "ua" },
+      { "id": "tunisia", "name": { "en": "Tunisia", "tr": "Tunus", "de": "Tunesien" }, "flag": "tn" }
     ],
     "G": [
-      { "id": "belgium", "name": { "en": "Belgium", "tr": "Belçika" }, "flag": "be" },
-      { "id": "egypt", "name": { "en": "Egypt", "tr": "Mısır" }, "flag": "eg" },
-      { "id": "iran", "name": { "en": "Iran", "tr": "İran" }, "flag": "ir" },
-      { "id": "new_zealand", "name": { "en": "New Zealand", "tr": "Yeni Zelanda" }, "flag": "nz" }
+      { "id": "belgium", "name": { "en": "Belgium", "tr": "Belçika", "de": "Belgien" }, "flag": "be" },
+      { "id": "egypt", "name": { "en": "Egypt", "tr": "Mısır", "de": "Ägypten" }, "flag": "eg" },
+      { "id": "iran", "name": { "en": "Iran", "tr": "İran", "de": "Iran" }, "flag": "ir" },
+      { "id": "new_zealand", "name": { "en": "New Zealand", "tr": "Yeni Zelanda", "de": "Neuseeland" }, "flag": "nz" }
     ],
     "H": [
-      { "id": "spain", "name": { "en": "Spain", "tr": "İspanya" }, "flag": "es" },
-      { "id": "cape_verde", "name": { "en": "Cape Verde", "tr": "Yeşil Burun Adaları" }, "flag": "cv" },
-      { "id": "saudi_arabia", "name": { "en": "Saudi Arabia", "tr": "Suudi Arabistan" }, "flag": "sa" },
-      { "id": "uruguay", "name": { "en": "Uruguay", "tr": "Uruguay" }, "flag": "uy" }
+      { "id": "spain", "name": { "en": "Spain", "tr": "İspanya", "de": "Spanien" }, "flag": "es" },
+      { "id": "cape_verde", "name": { "en": "Cape Verde", "tr": "Yeşil Burun Adaları", "de": "Kap Verde" }, "flag": "cv" },
+      { "id": "saudi_arabia", "name": { "en": "Saudi Arabia", "tr": "Suudi Arabistan", "de": "Saudi-Arabien" }, "flag": "sa" },
+      { "id": "uruguay", "name": { "en": "Uruguay", "tr": "Uruguay", "de": "Uruguay" }, "flag": "uy" }
     ],
     "I": [
-      { "id": "france", "name": { "en": "France", "tr": "Fransa" }, "flag": "fr" },
-      { "id": "senegal", "name": { "en": "Senegal", "tr": "Senegal" }, "flag": "sn" },
-      { "id": "bolivia", "name": { "en": "Bolivia", "tr": "Bolivya" }, "flag": "bo" },
-      { "id": "norway", "name": { "en": "Norway", "tr": "Norveç" }, "flag": "no" }
+      { "id": "france", "name": { "en": "France", "tr": "Fransa", "de": "Frankreich" }, "flag": "fr" },
+      { "id": "senegal", "name": { "en": "Senegal", "tr": "Senegal", "de": "Senegal" }, "flag": "sn" },
+      { "id": "bolivia", "name": { "en": "Bolivia", "tr": "Bolivya", "de": "Bolivien" }, "flag": "bo" },
+      { "id": "norway", "name": { "en": "Norway", "tr": "Norveç", "de": "Norwegen" }, "flag": "no" }
     ],
     "J": [
-      { "id": "argentina", "name": { "en": "Argentina", "tr": "Arjantin" }, "flag": "ar" },
-      { "id": "algeria", "name": { "en": "Algeria", "tr": "Cezayir" }, "flag": "dz" },
-      { "id": "austria", "name": { "en": "Austria", "tr": "Avusturya" }, "flag": "at" },
-      { "id": "jordan", "name": { "en": "Jordan", "tr": "Ürdün" }, "flag": "jo" }
+      { "id": "argentina", "name": { "en": "Argentina", "tr": "Arjantin", "de": "Argentinien" }, "flag": "ar" },
+      { "id": "algeria", "name": { "en": "Algeria", "tr": "Cezayir", "de": "Algerien" }, "flag": "dz" },
+      { "id": "austria", "name": { "en": "Austria", "tr": "Avusturya", "de": "Österreich" }, "flag": "at" },
+      { "id": "jordan", "name": { "en": "Jordan", "tr": "Ürdün", "de": "Jordanien" }, "flag": "jo" }
     ],
     "K": [
-      { "id": "portugal", "name": { "en": "Portugal", "tr": "Portekiz" }, "flag": "pt" },
-      { "id": "jamaica", "name": { "en": "Jamaica", "tr": "Jamaika" }, "flag": "jm" },
-      { "id": "uzbekistan", "name": { "en": "Uzbekistan", "tr": "Özbekistan" }, "flag": "uz" },
-      { "id": "colombia", "name": { "en": "Colombia", "tr": "Kolombiya" }, "flag": "co" }
+      { "id": "portugal", "name": { "en": "Portugal", "tr": "Portekiz", "de": "Portugal" }, "flag": "pt" },
+      { "id": "jamaica", "name": { "en": "Jamaica", "tr": "Jamaika", "de": "Jamaika" }, "flag": "jm" },
+      { "id": "uzbekistan", "name": { "en": "Uzbekistan", "tr": "Özbekistan", "de": "Usbekistan" }, "flag": "uz" },
+      { "id": "colombia", "name": { "en": "Colombia", "tr": "Kolombiya", "de": "Kolumbien" }, "flag": "co" }
     ],
     "L": [
-      { "id": "england", "name": { "en": "England", "tr": "İngiltere" }, "flag": "gb-eng" },
-      { "id": "croatia", "name": { "en": "Croatia", "tr": "Hırvatistan" }, "flag": "hr" },
-      { "id": "ghana", "name": { "en": "Ghana", "tr": "Gana" }, "flag": "gh" },
-      { "id": "panama", "name": { "en": "Panama", "tr": "Panama" }, "flag": "pa" }
+      { "id": "england", "name": { "en": "England", "tr": "İngiltere", "de": "England" }, "flag": "gb-eng" },
+      { "id": "croatia", "name": { "en": "Croatia", "tr": "Hırvatistan", "de": "Kroatien" }, "flag": "hr" },
+      { "id": "ghana", "name": { "en": "Ghana", "tr": "Gana", "de": "Ghana" }, "flag": "gh" },
+      { "id": "panama", "name": { "en": "Panama", "tr": "Panama", "de": "Panama" }, "flag": "pa" }
     ]
   }
 }

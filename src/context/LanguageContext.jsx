@@ -26,7 +26,7 @@ const translations = {
     selectedText: "selected",
     chooseExactlyEight: "Please select exactly 8 teams to continue.",
     backToGroups: "Back to Groups",
-    shareMessage: "Here is my 2026 World Cup prediction! Created on worldcuplocaltime.com/tree",
+    shareMessage: "Here is my 2026 World Cup prediction! Created on worldcuptree.com",
     viewTree: "View Full Tree",
     roundOf32: "Round of 32",
     roundOf16: "Round of 16",
@@ -37,7 +37,58 @@ const translations = {
     runnerUp: "Runner-up",
     thirdPlace: "3rd Place",
     simulateBtn: "Simulate",
-    stopSimBtn: "Stop"
+    stopSimBtn: "Stop",
+    roadToFinalLive: "ROAD TO GRANDE FINAL LIVE",
+    finalDayIsHere: "FINAL DAY IS HERE!",
+    days: "DAYS",
+    hours: "HOURS",
+    minutes: "MINS",
+    seconds: "SECS",
+    resetConfirm: "All predictions will be reset. Are you sure?",
+    rankTwelveGroups: "Rank 12 Groups",
+    rankTwelveGroupsDesc: "Move teams up or down to set group standings",
+    chooseBestThirds: "Choose Best 3rds",
+    chooseBestThirdsDesc: "Select the 8 best third-place wildcards to advance",
+    bracketPredictorTitle: "Bracket Predictor",
+    bracketPredictorDesc: "Predict bracket matchups from Round of 32 to final",
+    downloadCardTitle: "Download Card",
+    downloadCardDesc: "Save and share your bracket prediction as a premium PNG",
+    stepGroups: "1. Groups",
+    stepThirds: "2. Thirds",
+    stepBracket: "3. Bracket",
+    stepShare: "4. Share",
+    advertisement: "ADVERTISEMENT",
+    listView: "List View",
+    liveStandings: "Live Standings",
+    teamCol: "Team",
+    playedCol: "P",
+    wonCol: "W",
+    drawnCol: "D",
+    lostCol: "L",
+    gdCol: "GD",
+    pointsCol: "PTS",
+    playedTooltip: "Played",
+    wonTooltip: "Won",
+    drawnTooltip: "Drawn",
+    lostTooltip: "Lost",
+    gdTooltip: "Goal Difference",
+    pointsTooltip: "Points",
+    viewSquadTooltip: "View Squad & Values",
+    squadAndMarketValues: "Squad & Market Values",
+    leftSide: "Left Side",
+    rightSide: "Right Side",
+    finalTitle: "Final",
+    swipeMessage: "Swipe left/right or use the buttons above to view",
+    selectChampionToDownload: "Please select your champion to download your prediction card.",
+    chooseStartRound: "From Which Round Should Your Prediction Card Start?",
+    roundOf32Full: "32 Teams (Full)",
+    roundOf16Short: "16 Teams",
+    quarterfinalsShort: "8 Teams",
+    cardTitle: "My 2026 World Cup Bracket Predictions",
+    bracketTitleR32: "Tournament Bracket (Round of 32 - Final)",
+    bracketTitleR16: "Tournament Bracket (Round of 16 - Final)",
+    bracketTitleQF: "Tournament Bracket (Quarterfinals - Final)",
+    totalValue: "Total Value"
   },
   tr: {
     heroTitle: "WorldCupTree",
@@ -73,7 +124,145 @@ const translations = {
     runnerUp: "İkinci",
     thirdPlace: "Üçüncü",
     simulateBtn: "Simüle Et",
-    stopSimBtn: "Durdur"
+    stopSimBtn: "Durdur",
+    roadToFinalLive: "BÜYÜK FİNAL YOLU CANLI",
+    finalDayIsHere: "FİNAL GÜNÜ BAŞLADI!",
+    days: "GÜN",
+    hours: "SAAT",
+    minutes: "DAKİKA",
+    seconds: "SANİYE",
+    resetConfirm: "Tüm tahminleriniz sıfırlanacaktır. Emin misiniz?",
+    rankTwelveGroups: "12 Grubu Sırala",
+    rankTwelveGroupsDesc: "Takımları oklarla aşağı/yukarı taşıyarak grupları belirle",
+    chooseBestThirds: "Üçüncüleri Seç",
+    chooseBestThirdsDesc: "Tur atlayacak en iyi 8 üçüncü takımı seçerek elemelere taşı",
+    bracketPredictorTitle: "Ağacı Tahmin Et",
+    bracketPredictorDesc: "Son 32 turundan finale kadar eleme eşleşmelerini tahmin et",
+    downloadCardTitle: "Kartını İndir",
+    downloadCardDesc: "Tahmin ağacını şık bir görsel kart olarak indir ve paylaş",
+    stepGroups: "1. Gruplar",
+    stepThirds: "2. Üçüncüler",
+    stepBracket: "3. Elemeler",
+    stepShare: "4. İndir",
+    advertisement: "SPONSORLU BAĞLANTI",
+    listView: "Liste Görünümü",
+    liveStandings: "Canlı Puan Durumu",
+    teamCol: "Takım",
+    playedCol: "O",
+    wonCol: "G",
+    drawnCol: "B",
+    lostCol: "M",
+    gdCol: "AV",
+    pointsCol: "P",
+    playedTooltip: "Oynanan",
+    wonTooltip: "Galibiyet",
+    drawnTooltip: "Beraberlik",
+    lostTooltip: "Mağlubiyet",
+    gdTooltip: "Averaj",
+    pointsTooltip: "Puan",
+    viewSquadTooltip: "Kadro & Değerleri Gör",
+    squadAndMarketValues: "Kadro & Piyasa Değerleri",
+    leftSide: "Sol Taraf (A)",
+    rightSide: "Sağ Taraf (B)",
+    finalTitle: "Final & Şampiyon",
+    swipeMessage: "Ağacı sağa/sola kaydırabilir veya yukarıdaki butonları kullanabilirsiniz",
+    selectChampionToDownload: "Tahmin kartınızı indirmek için lütfen şampiyonunuzu seçin.",
+    chooseStartRound: "Tahmin Kartınız Hangi Turdan Başlasın?",
+    roundOf32Full: "32 Takım (Tam)",
+    roundOf16Short: "16 Takım",
+    quarterfinalsShort: "8 Takım",
+    cardTitle: "2026 Dünya Kupası Tahmin Ağacım",
+    bracketTitleR32: "Turnuva Ağacı (Son 32 - Final)",
+    bracketTitleR16: "Turnuva Ağacı (Son 16 - Final)",
+    bracketTitleQF: "Turnuva Ağacı (Çeyrek Final - Final)",
+    totalValue: "Toplam Değer"
+  },
+  de: {
+    heroTitle: "WorldCupTree",
+    heroSubtitle: "Erstelle deinen WM-Turnierbaum 2026. Wähle deinen Champion. Teile deine Prognose.",
+    startBtn: "Prognose starten",
+    groupStageTitle: "1. Gruppenphase Platzierungen",
+    groupStageDesc: "Ordne die Teams in jeder Gruppe mit den Pfeilen. Die besten 2 jeder Gruppe qualifizieren sich automatisch, die Gruppendritten spielen um die besten 8 Plätze.",
+    thirdPlaceTitle: "2. Beste Gruppendritte",
+    thirdPlaceDesc: "Wähle genau 8 Gruppendritte für das Sechzehntelfinale (Runde der 32). Wir weisen sie automatisch nach den offiziellen Turnierregeln den richtigen Plätzen zu.",
+    bracketTitle: "3. K.o.-Runde",
+    bracketDesc: "Tippe die Gewinner von der Runde der 32 bis zum Finale. Tippe auf ein Team, um es eine Runde weiterzubringen.",
+    championText: "WELTMEISTER 2026",
+    downloadBtn: "Turnierbaum-Karte herunterladen",
+    resetBtn: "Zurücksetzen",
+    ourPathMode: "Unser Weg Modus",
+    ourPathModeDesc: "Hebe den Weg der Türkei im Turnierbaum hervor!",
+    unofficialDisclaimer: "Inoffiziertes Fan-Prognose-Tool für die Weltmeisterschaft. Nicht mit der FIFA verbunden.",
+    privacyPolicy: "Datenschutzerklärung",
+    contact: "Kontakt",
+    nextStep: "Nächster Schritt",
+    prevStep: "Vorheriger Schritt",
+    selectedText: "ausgewählt",
+    chooseExactlyEight: "Bitte wähle genau 8 Teams aus, um fortzufahren.",
+    backToGroups: "Zurück zu den Gruppen",
+    shareMessage: "Hier ist meine Prognose für die WM 2026! Erstellt auf worldcuptree.com",
+    viewTree: "Ganzen Turnierbaum anzeigen",
+    roundOf32: "Runde der 32",
+    roundOf16: "Achtelfinale",
+    quarterFinals: "Viertelfinale",
+    semiFinals: "Halbfinale",
+    final: "Finale",
+    winner: "Sieger",
+    runnerUp: "Zweiter",
+    thirdPlace: "Dritter",
+    simulateBtn: "Simulieren",
+    stopSimBtn: "Stopp",
+    roadToFinalLive: "WEG ZUM FINALE LIVE",
+    finalDayIsHere: "FINALTAG IST DA!",
+    days: "TAGE",
+    hours: "STUNDEN",
+    minutes: "MIN.",
+    seconds: "SEK.",
+    resetConfirm: "Alle Prognosen werden zurückgesetzt. Bist du sicher?",
+    rankTwelveGroups: "12 Gruppen ordnen",
+    rankTwelveGroupsDesc: "Bewege die Teams nach oben oder unten, um den Gruppenstand festzulegen",
+    chooseBestThirds: "Beste Dritte wählen",
+    chooseBestThirdsDesc: "Wähle die 8 besten Gruppendritten aus, um fortzufahren",
+    bracketPredictorTitle: "Turnierbaum tippen",
+    bracketPredictorDesc: "Tippe die K.o.-Spiele von der Runde der 32 bis zum Finale",
+    downloadCardTitle: "Karte herunterladen",
+    downloadCardDesc: "Speichere und teile deine Prognose als hochwertige PNG-Datei",
+    stepGroups: "1. Gruppen",
+    stepThirds: "2. Dritte",
+    stepBracket: "3. K.o.-Runde",
+    stepShare: "4. Teilen",
+    advertisement: "WERBUNG",
+    listView: "Listenansicht",
+    liveStandings: "Live-Tabelle",
+    teamCol: "Team",
+    playedCol: "Sp",
+    wonCol: "S",
+    drawnCol: "U",
+    lostCol: "N",
+    gdCol: "TD",
+    pointsCol: "PKT",
+    playedTooltip: "Spiele",
+    wonTooltip: "Siege",
+    drawnTooltip: "Unentschieden",
+    lostTooltip: "Niederlagen",
+    gdTooltip: "Tordifferenz",
+    pointsTooltip: "Punkte",
+    viewSquadTooltip: "Kader & Marktwerte anzeigen",
+    squadAndMarketValues: "Kader & Marktwerte",
+    leftSide: "Linke Seite (A)",
+    rightSide: "Rechte Seite (B)",
+    finalTitle: "Finale & Champion",
+    swipeMessage: "Wische nach links/rechts oder nutze die Tasten oben zum Navigieren",
+    selectChampionToDownload: "Bitte wähle deinen Weltmeister aus, um deine Turnierbaum-Karte herunterzuladen.",
+    chooseStartRound: "Ab welcher Runde soll deine Karte starten?",
+    roundOf32Full: "32 Teams (Vollständig)",
+    roundOf16Short: "16 Teams",
+    quarterfinalsShort: "8 Teams",
+    cardTitle: "Meine Prognose für die WM 2026",
+    bracketTitleR32: "Turnierbaum (Runde der 32 - Finale)",
+    bracketTitleR16: "Turnierbaum (Achtelfinale - Finale)",
+    bracketTitleQF: "Turnierbaum (Viertelfinale - Finale)",
+    totalValue: "Gesamtmarktwert"
   }
 };
 
@@ -82,7 +271,7 @@ export const LanguageProvider = ({ children }) => {
     // 1. Check URL parameters first (crucial for SEO crawlers to access different languages)
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
-    if (urlLang === 'tr' || urlLang === 'en') {
+    if (urlLang === 'tr' || urlLang === 'en' || urlLang === 'de') {
       return urlLang;
     }
     // 2. Check localStorage
@@ -90,7 +279,9 @@ export const LanguageProvider = ({ children }) => {
     if (saved) return saved;
     // 3. Fallback to browser language
     const browserLang = navigator.language || navigator.userLanguage;
-    return browserLang.startsWith('tr') ? 'tr' : 'en';
+    if (browserLang.startsWith('tr')) return 'tr';
+    if (browserLang.startsWith('de')) return 'de';
+    return 'en';
   });
 
   useEffect(() => {
@@ -102,6 +293,12 @@ export const LanguageProvider = ({ children }) => {
       document.querySelector('meta[name="description"]')?.setAttribute(
         'content', 
         "2026 Dünya Kupası turnuva ağacını oluştur, grupları ve en iyi üçüncüleri seç, eleme maçlarını tahmin et ve şık görsel kart olarak indirip paylaş."
+      );
+    } else if (lang === 'de') {
+      document.title = "WM Turnierbaum Prognose 2026 - WorldCupTree";
+      document.querySelector('meta[name="description"]')?.setAttribute(
+        'content', 
+        "Simuliere deinen WM-Turnierbaum 2026. Gruppen platzieren, beste Dritte wählen, K.o.-Spiele tippen und deine Turnierbaum-Karte teilen."
       );
     } else {
       document.title = "World Cup Bracket Predictor 2026 - WorldCupTree";
@@ -118,7 +315,11 @@ export const LanguageProvider = ({ children }) => {
 
   const toggleLanguage = () => {
     setLang((prev) => {
-      const next = prev === 'en' ? 'tr' : 'en';
+      let next;
+      if (prev === 'tr') next = 'en';
+      else if (prev === 'en') next = 'de';
+      else next = 'tr';
+      
       // Sync language change to URL query parameter
       const url = new URL(window.location);
       url.searchParams.set('lang', next);

@@ -208,7 +208,7 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
     return (
       <div style={{ textAlign: 'center', padding: '30px', opacity: 0.6 }}>
         <p style={{ color: 'var(--text-muted)' }}>
-          {lang === 'tr' ? 'Tahmin kartınızı indirmek için lütfen şampiyonunuzu seçin.' : 'Please select your champion to download your prediction card.'}
+          {t('selectChampionToDownload')}
         </p>
       </div>
     );
@@ -219,29 +219,29 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
       {/* Round Selection Question Card */}
       <div className="glass-panel" style={{ maxWidth: '600px', width: '100%', marginBottom: '32px', padding: '24px', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <h3 style={{ fontSize: '1.15rem', marginBottom: '16px', fontFamily: 'var(--font-title)', fontWeight: 700, color: 'var(--color-secondary)' }}>
-          {lang === 'tr' ? 'Tahmin Kartınız Hangi Turdan Başlasın?' : 'From Which Round Should Your Prediction Card Start?'}
+          {t('chooseStartRound')}
         </h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
           <button 
             className={`selector-card-btn ${selectedRound === 'r32' ? 'active' : ''}`}
             onClick={() => setSelectedRound('r32')}
           >
-            <div className="selector-card-title">{lang === 'tr' ? 'Son 32' : 'Round of 32'}</div>
-            <div className="selector-card-desc">{lang === 'tr' ? '32 Takım (Tam)' : '32 Teams (Full)'}</div>
+            <div className="selector-card-title">{t('roundOf32')}</div>
+            <div className="selector-card-desc">{t('roundOf32Full')}</div>
           </button>
           <button 
             className={`selector-card-btn ${selectedRound === 'r16' ? 'active' : ''}`}
             onClick={() => setSelectedRound('r16')}
           >
-            <div className="selector-card-title">{lang === 'tr' ? 'Son 16' : 'Round of 16'}</div>
-            <div className="selector-card-desc">{lang === 'tr' ? '16 Takım' : '16 Teams'}</div>
+            <div className="selector-card-title">{t('roundOf16')}</div>
+            <div className="selector-card-desc">{t('roundOf16Short')}</div>
           </button>
           <button 
             className={`selector-card-btn ${selectedRound === 'qf' ? 'active' : ''}`}
             onClick={() => setSelectedRound('qf')}
           >
-            <div className="selector-card-title">{lang === 'tr' ? 'Çeyrek Final' : 'Quarterfinal'}</div>
-            <div className="selector-card-desc">{lang === 'tr' ? '8 Takım' : '8 Teams'}</div>
+            <div className="selector-card-title">{t('quarterFinals')}</div>
+            <div className="selector-card-desc">{t('quarterfinalsShort')}</div>
           </button>
         </div>
       </div>
@@ -264,7 +264,7 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
               <span>WorldCupTree 2026</span>
             </div>
             <div className="share-card-tagline">
-              {lang === 'tr' ? '2026 Dünya Kupası Tahmin Ağacım' : 'My 2026 World Cup Bracket Predictions'}
+              {t('cardTitle')}
             </div>
           </div>
 
@@ -363,10 +363,10 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
           <div className="share-card-tree-section">
             <div className="share-card-section-title" style={{ marginBottom: '20px' }}>
               {selectedRound === 'r32'
-                ? (lang === 'tr' ? 'Turnuva Ağacı (Son 32 - Final)' : 'Tournament Bracket (Round of 32 - Final)')
+                ? t('bracketTitleR32')
                 : selectedRound === 'r16'
-                ? (lang === 'tr' ? 'Turnuva Ağacı (Son 16 - Final)' : 'Tournament Bracket (Round of 16 - Final)')
-                : (lang === 'tr' ? 'Turnuva Ağacı (Çeyrek Final - Final)' : 'Tournament Bracket (Quarterfinals - Final)')
+                ? t('bracketTitleR16')
+                : t('bracketTitleQF')
               }
             </div>
             
