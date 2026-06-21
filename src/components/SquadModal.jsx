@@ -22,7 +22,9 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
   // Position translators
   const posLabels = {
     tr: { GK: 'KL', DF: 'DF', MF: 'OS', FW: 'FV' },
-    en: { GK: 'GK', DF: 'DF', MF: 'MF', FW: 'FW' }
+    en: { GK: 'GK', DF: 'DF', MF: 'MF', FW: 'FW' },
+    fr: { GK: 'GB', DF: 'DF', MF: 'ML', FW: 'AT' },
+    de: { GK: 'TW', DF: 'AB', MF: 'MF', FW: 'ANG' }
   };
 
   const getPositionBadge = (pos) => {
@@ -69,7 +71,7 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
             <div>
               <h3 className="modal-team-name">{team.name[lang] || team.name.en}</h3>
               <p className="modal-squad-value">
-                {lang === 'tr' ? 'Toplam Değer: ' : (lang === 'de' ? 'Gesamtmarktwert: ' : 'Total Value: ')}
+                {lang === 'tr' ? 'Toplam Değer: ' : (lang === 'de' ? 'Gesamtmarktwert: ' : (lang === 'fr' ? 'Valeur Totale : ' : 'Total Value: '))}
                 <span className="value-glowing">€{squad.totalValue}M</span>
               </p>
             </div>
@@ -82,8 +84,8 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
         {/* Modal Content */}
         <div className="modal-body">
           <div className="squad-list-header">
-            <span>{lang === 'tr' ? 'Oyuncu / Kulüp' : (lang === 'de' ? 'Spieler / Verein' : 'Player / Club')}</span>
-            <span>{lang === 'tr' ? 'Değer' : (lang === 'de' ? 'Wert' : 'Value')}</span>
+            <span>{lang === 'tr' ? 'Oyuncu / Kulüp' : (lang === 'de' ? 'Spieler / Verein' : (lang === 'fr' ? 'Joueur / Club' : 'Player / Club'))}</span>
+            <span>{lang === 'tr' ? 'Değer' : (lang === 'de' ? 'Wert' : (lang === 'fr' ? 'Valeur' : 'Value'))}</span>
           </div>
 
           <div className="squad-list-scroll">
@@ -107,7 +109,7 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
         {/* Modal Footer */}
         <div className="modal-footer">
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            * {lang === 'tr' ? 'Piyasa değerleri Transfermarkt verileri esas alınarak hazırlanmıştır.' : (lang === 'de' ? 'Die Marktwerte basieren auf Transfermarkt-Daten.' : 'Market values are based on Transfermarkt data.')}
+            * {lang === 'tr' ? 'Piyasa değerleri Transfermarkt verileri esas alınarak hazırlanmıştır.' : (lang === 'de' ? 'Die Marktwerte basieren auf Transfermarkt-Daten.' : (lang === 'fr' ? 'Les valeurs marchandes sont basées sur les données de Transfermarkt.' : 'Market values are based on Transfermarkt data.'))}
           </span>
         </div>
       </div>

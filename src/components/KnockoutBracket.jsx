@@ -357,7 +357,17 @@ export default function KnockoutBracket({
     return (
       <div key={match.id} className="match-card" id={cardId}>
         <div className="match-info-label">
-          {lang === 'tr' ? match.labelTr : (lang === 'de' ? match.labelDe : match.labelEn)}
+          {(() => {
+            if (lang === 'tr') return match.labelTr;
+            if (lang === 'de') return match.labelDe;
+            if (lang === 'fr') {
+              if (match.labelEn.startsWith('Quarterfinal')) return match.labelEn.replace('Quarterfinal', 'Quart de finale');
+              if (match.labelEn.startsWith('Semifinal')) return match.labelEn.replace('Semifinal', 'Demi-finale');
+              if (match.labelEn === 'Final') return 'Finale';
+              return match.labelEn;
+            }
+            return match.labelEn;
+          })()}
         </div>
         {renderTeamRow(match.home, isHomeSelected, 'home')}
         {renderTeamRow(match.away, isAwaySelected, 'away')}

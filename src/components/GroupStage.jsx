@@ -70,9 +70,9 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
         {Object.keys(standings).map((groupLetter) => (
           <div key={groupLetter} className="group-card glass-panel">
             <div className="group-header">
-              <span className="group-name">GROUP {groupLetter}</span>
+              <span className="group-name">{lang === 'tr' ? 'GRUP' : (lang === 'de' ? 'GRUPPE' : (lang === 'fr' ? 'GROUPE' : 'GROUP'))} {groupLetter}</span>
               <span className="group-sub" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>
-                {lang === 'tr' ? 'GRUP' : (lang === 'de' ? 'GRUPPE' : 'GROUP')} {groupLetter}
+                {lang === 'tr' ? 'GRUP' : (lang === 'de' ? 'GRUPPE' : (lang === 'fr' ? 'GROUPE' : 'GROUP'))} {groupLetter}
               </span>
             </div>
 

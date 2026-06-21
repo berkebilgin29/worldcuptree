@@ -473,7 +473,7 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
           {loading ? (
             <>
               <Loader2 className="animate-spin" size={18} />
-              <span>{lang === 'tr' ? 'Hazırlanıyor...' : 'Generating...'}</span>
+              <span>{lang === 'tr' ? 'Hazırlanıyor...' : (lang === 'de' ? 'Generieren...' : (lang === 'fr' ? 'Génération...' : 'Generating...'))}</span>
             </>
           ) : (
             <>

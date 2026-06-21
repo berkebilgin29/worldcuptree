@@ -263,6 +263,93 @@ const translations = {
     bracketTitleR16: "Turnierbaum (Achtelfinale - Finale)",
     bracketTitleQF: "Turnierbaum (Viertelfinale - Finale)",
     totalValue: "Gesamtmarktwert"
+  },
+  fr: {
+    heroTitle: "WorldCupTree",
+    heroSubtitle: "Créez votre tableau de la Coupe du Monde 2026. Choisissez votre champion. Partagez votre arbre.",
+    startBtn: "Commencer les pronostics",
+    groupStageTitle: "1. Classement de la phase de groupes",
+    groupStageDesc: "Classez toutes les équipes de chaque groupe en cliquant sur les flèches. Les 2 premiers de chaque groupe se qualifient automatiquement, et les équipes classées 3èmes s'affrontent pour les 8 meilleures places.",
+    thirdPlaceTitle: "2. Meilleurs troisièmes de groupe",
+    thirdPlaceDesc: "Sélectionnez exactement 8 équipes classées 3èmes pour accéder aux seizièmes de finale (Ronde des 32). Nous les associerons automatiquement aux bonnes positions selon les règles officielles du tournoi.",
+    bracketTitle: "3. Tableau de la phase finale",
+    bracketDesc: "Pronostiquez les vainqueurs des seizièmes de finale jusqu'à la finale. Appuyez sur une équipe pour la faire progresser.",
+    championText: "CHAMPION DE LA COUPE DU MONDE 2026",
+    downloadBtn: "Télécharger votre tableau en image",
+    resetBtn: "Réinitialiser",
+    ourPathMode: "Mode Notre Route",
+    ourPathModeDesc: "Mettez en valeur le parcours de la Turquie dans le tableau !",
+    unofficialDisclaimer: "Outil de pronostic non officiel créé par des fans. Non affilié à la FIFA.",
+    privacyPolicy: "Politique de confidentialité",
+    contact: "Contact",
+    nextStep: "Étape suivante",
+    prevStep: "Étape précédente",
+    selectedText: "sélectionnés",
+    chooseExactlyEight: "Veuillez sélectionner exactement 8 équipes pour continuer.",
+    backToGroups: "Retour aux groupes",
+    shareMessage: "Voici mes pronostics pour la Coupe du Monde 2026 ! Créé sur worldcuptree.com",
+    viewTree: "Voir tout le tableau",
+    roundOf32: "Seizièmes de finale",
+    roundOf16: "Huitièmes de finale",
+    quarterFinals: "Quarts de finale",
+    semiFinals: "Demi-finales",
+    final: "Finale",
+    winner: "Vainqueur",
+    runnerUp: "Finaliste",
+    thirdPlace: "3ème Place",
+    simulateBtn: "Simuler",
+    stopSimBtn: "Arrêter",
+    roadToFinalLive: "ROUTE VERS LA GRANDE FINALE EN DIRECT",
+    finalDayIsHere: "LE JOUR DE LA FINALE EST ARRIVÉ !",
+    days: "JOURS",
+    hours: "HEURES",
+    minutes: "MIN",
+    seconds: "SEC",
+    resetConfirm: "Tous les pronostics seront réinitialisés. Êtes-vous sûr ?",
+    rankTwelveGroups: "Classer les 12 groupes",
+    rankTwelveGroupsDesc: "Déplacez les équipes vers le haut ou le bas pour établir le classement",
+    chooseBestThirds: "Choisir les meilleurs 3èmes",
+    chooseBestThirdsDesc: "Sélectionnez les 8 meilleurs troisièmes pour accéder aux seizièmes de finale",
+    bracketPredictorTitle: "Pronostics du tableau",
+    bracketPredictorDesc: "Pronostiquez les matchs de la phase finale des seizièmes de finale à la finale",
+    downloadCardTitle: "Télécharger la carte",
+    downloadCardDesc: "Sauvegardez et partagez votre pronostic sous forme d'image premium PNG",
+    stepGroups: "1. Groupes",
+    stepThirds: "2. Troisièmes",
+    stepBracket: "3. Tableau",
+    stepShare: "4. Partager",
+    advertisement: "PUBLICITÉ",
+    listView: "Vue liste",
+    liveStandings: "Classement en direct",
+    teamCol: "Équipe",
+    playedCol: "MJ",
+    wonCol: "G",
+    drawnCol: "N",
+    lostCol: "P",
+    gdCol: "DB",
+    pointsCol: "PTS",
+    playedTooltip: "Matchs Joués",
+    wonTooltip: "Gagnés",
+    drawnTooltip: "Nuls",
+    lostTooltip: "Perdus",
+    gdTooltip: "Différence de Buts",
+    pointsTooltip: "Points",
+    viewSquadTooltip: "Voir l'effectif et les valeurs",
+    squadAndMarketValues: "Effectif & Valeurs marchandes",
+    leftSide: "Côté gauche (A)",
+    rightSide: "Côté droit (B)",
+    finalTitle: "Finale & Champion",
+    swipeMessage: "Glissez vers la gauche/droite ou utilisez les boutons ci-dessus pour naviguer",
+    selectChampionToDownload: "Veuillez sélectionner votre champion pour télécharger votre carte de pronostics.",
+    chooseStartRound: "À partir de quel tour votre carte de pronostics doit-elle commencer ?",
+    roundOf32Full: "32 Équipes (Complet)",
+    roundOf16Short: "16 Équipes",
+    quarterfinalsShort: "8 Équipes",
+    cardTitle: "Mes pronostics pour la Coupe du Monde 2026",
+    bracketTitleR32: "Tableau final (Seizièmes - Finale)",
+    bracketTitleR16: "Tableau final (Huitièmes - Finale)",
+    bracketTitleQF: "Tableau final (Quarts - Finale)",
+    totalValue: "Valeur totale"
   }
 };
 
@@ -271,7 +358,7 @@ export const LanguageProvider = ({ children }) => {
     // 1. Check URL parameters first (crucial for SEO crawlers to access different languages)
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
-    if (urlLang === 'tr' || urlLang === 'en' || urlLang === 'de') {
+    if (urlLang === 'tr' || urlLang === 'en' || urlLang === 'de' || urlLang === 'fr') {
       return urlLang;
     }
     // 2. Check localStorage
@@ -281,11 +368,15 @@ export const LanguageProvider = ({ children }) => {
     const browserLang = navigator.language || navigator.userLanguage;
     if (browserLang.startsWith('tr')) return 'tr';
     if (browserLang.startsWith('de')) return 'de';
+    if (browserLang.startsWith('fr')) return 'fr';
     return 'en';
   });
 
   useEffect(() => {
     localStorage.setItem('worldcup_lang', lang);
+    
+    // Dynamically update document lang attribute for SEO
+    document.documentElement.lang = lang;
     
     // Dynamically update page metadata for SEO crawlers
     if (lang === 'tr') {
@@ -299,6 +390,12 @@ export const LanguageProvider = ({ children }) => {
       document.querySelector('meta[name="description"]')?.setAttribute(
         'content', 
         "Simuliere deinen WM-Turnierbaum 2026. Gruppen platzieren, beste Dritte wählen, K.o.-Spiele tippen und deine Turnierbaum-Karte teilen."
+      );
+    } else if (lang === 'fr') {
+      document.title = "Simulateur de Tableau Coupe du Monde 2026 - WorldCupTree";
+      document.querySelector('meta[name="description"]')?.setAttribute(
+        'content', 
+        "Créez et simulez votre tableau de la Coupe du Monde de la FIFA 2026. Classez les groupes, sélectionnez les meilleurs troisièmes et pronostiquez le champion."
       );
     } else {
       document.title = "World Cup Bracket Predictor 2026 - WorldCupTree";
@@ -318,6 +415,7 @@ export const LanguageProvider = ({ children }) => {
       let next;
       if (prev === 'tr') next = 'en';
       else if (prev === 'en') next = 'de';
+      else if (prev === 'de') next = 'fr';
       else next = 'tr';
       
       // Sync language change to URL query parameter
