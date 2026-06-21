@@ -103,7 +103,7 @@ export default function ThirdPlaceSelector({ standings, selectedThirdPlaces, set
               >
                 <img 
                   src={`https://flagcdn.com/w40/${team.flag.toLowerCase()}.png`} 
-                  alt={team.name[lang]} 
+                  alt={team.name[lang] || team.name.en} 
                   className="flag-img"
                   onError={(e) => {
                     if (team.flag === 'gb-eng') e.target.src = 'https://flagcdn.com/w40/gb.png';
@@ -112,7 +112,7 @@ export default function ThirdPlaceSelector({ standings, selectedThirdPlaces, set
                     else e.target.src = 'https://flagcdn.com/w40/un.png';
                   }}
                 />
-                <span className="team-name" style={{ fontSize: '0.85rem' }}>{team.name[lang]}</span>
+                <span className="team-name" style={{ fontSize: '0.85rem' }}>{team.name[lang] || team.name.en}</span>
                 
                 <button
                   className="squad-info-trigger-btn"

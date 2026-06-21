@@ -57,7 +57,7 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
           <div className="modal-team-title">
             <img 
               src={`https://flagcdn.com/w80/${team.flag.toLowerCase()}.png`} 
-              alt={team.name[lang]} 
+              alt={team.name[lang] || team.name.en} 
               className="modal-flag"
               onError={(e) => {
                 if (team.flag === 'gb-eng') e.target.src = 'https://flagcdn.com/w80/gb.png';
@@ -67,7 +67,7 @@ export default function SquadModal({ isOpen, onClose, team, lang }) {
               }}
             />
             <div>
-              <h3 className="modal-team-name">{team.name[lang]}</h3>
+              <h3 className="modal-team-name">{team.name[lang] || team.name.en}</h3>
               <p className="modal-squad-value">
                 {lang === 'tr' ? 'Toplam Değer: ' : (lang === 'de' ? 'Gesamtmarktwert: ' : 'Total Value: ')}
                 <span className="value-glowing">€{squad.totalValue}M</span>

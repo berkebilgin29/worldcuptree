@@ -21,7 +21,7 @@ const RATINGS = {
   brazil: 95, morocco: 87, haiti: 62, scotland: 73,
   united_states: 83, paraguay: 76, australia: 72, turkey: 85,
   germany: 92, curacao: 60, ivory_coast: 76, ecuador: 78,
-  netherlands: 90, japan: 82, ukraine: 81, tunisia: 73,
+  netherlands: 90, japan: 82, sweden: 83, tunisia: 73,
   belgium: 89, egypt: 76, iran: 70, new_zealand: 65,
   spain: 94, cape_verde: 68, saudi_arabia: 67, uruguay: 88,
   france: 96, senegal: 82, bolivia: 68, norway: 78,

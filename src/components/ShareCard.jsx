@@ -27,7 +27,7 @@ const TEAM_CODES = {
   ecuador: 'ECU',
   netherlands: 'NED',
   japan: 'JPN',
-  ukraine: 'UKR',
+  sweden: 'SWE',
   tunisia: 'TUN',
   belgium: 'BEL',
   egypt: 'EGY',
@@ -122,8 +122,8 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
 
   const getTeamCode = (team) => {
     if (!team) return 'TBD';
-    if (team.isPlaceholder) return team.name[lang];
-    return TEAM_CODES[team.id] || team.name[lang].slice(0, 3).toUpperCase();
+    if (team.isPlaceholder) return team.name[lang] || team.name.en;
+    return TEAM_CODES[team.id] || (team.name[lang] || team.name.en).slice(0, 3).toUpperCase();
   };
 
   const renderTreeMatch = (match, predictionId, side = 'left') => {
@@ -148,7 +148,7 @@ export default function ShareCard({ standings, selectedThirdPlaces, predictions 
         <div className={`tree-team ${isWinner ? 'winner' : ''} ${isLoser ? 'loser' : ''}`}>
           <img 
             src={`https://flagcdn.com/w40/${team.flag.toLowerCase()}.png`} 
-            alt={team.name[lang]} 
+            alt={team.name[lang] || team.name.en} 
             className="tree-flag"
             crossOrigin="anonymous"
             onError={(e) => {

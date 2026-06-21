@@ -105,7 +105,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
                       >
                         <img 
                           src={`https://flagcdn.com/w40/${team.flag.toLowerCase()}.png`} 
-                          alt={team.name[lang]} 
+                          alt={team.name[lang] || team.name.en} 
                           className="flag-img"
                           onError={(e) => {
                             if (team.flag === 'gb-eng') e.target.src = 'https://flagcdn.com/w40/gb.png';
@@ -114,7 +114,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
                             else e.target.src = 'https://flagcdn.com/w40/un.png';
                           }}
                         />
-                        <span className="team-name" style={{ fontSize: '0.8rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{team.name[lang]}</span>
+                        <span className="team-name" style={{ fontSize: '0.8rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{team.name[lang] || team.name.en}</span>
                       </div>
                       <span className="col-stat">{stats.O}</span>
                       <span className="col-stat">{stats.G}</span>
@@ -165,7 +165,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
                         <span className="team-rank-num">{idx + 1}</span>
                         <img 
                           src={`https://flagcdn.com/w40/${team.flag.toLowerCase()}.png`} 
-                          alt={team.name[lang]} 
+                          alt={team.name[lang] || team.name.en} 
                           className="flag-img"
                           onError={(e) => {
                             if (team.flag === 'gb-eng') e.target.src = 'https://flagcdn.com/w40/gb.png';
@@ -174,7 +174,7 @@ export default function GroupStage({ standings, setStandings, onOpenSquad }) {
                             else e.target.src = 'https://flagcdn.com/w40/un.png';
                           }}
                         />
-                        <span className="team-name">{team.name[lang]}</span>
+                        <span className="team-name">{team.name[lang] || team.name.en}</span>
                       </div>
 
                       <div className="team-controls">

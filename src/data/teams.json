@@ -33,7 +33,7 @@
     "F": [
       { "id": "netherlands", "name": { "en": "Netherlands", "tr": "Hollanda", "de": "Niederlande" }, "flag": "nl" },
       { "id": "japan", "name": { "en": "Japan", "tr": "Japonya", "de": "Japan" }, "flag": "jp" },
-      { "id": "ukraine", "name": { "en": "Ukraine", "tr": "Ukrayna", "de": "Ukraine" }, "flag": "ua" },
+      { "id": "sweden", "name": { "en": "Sweden", "tr": "İsveç", "de": "Schweden" }, "flag": "se" },
       { "id": "tunisia", "name": { "en": "Tunisia", "tr": "Tunus", "de": "Tunesien" }, "flag": "tn" }
     ],
     "G": [

@@ -407,17 +407,17 @@ export const curatedSquads = {
       { name: "Zion Suzuki", pos: "GK", club: "Parma", value: "7.0M", rawVal: 7000000 }
     ]
   },
-  ukraine: {
-    totalValue: 254.0,
+  sweden: {
+    totalValue: 249.5,
     players: [
-      { name: "Artem Dovbyk", pos: "FW", club: "AS Roma", value: "35.0M", rawVal: 35000000 },
-      { name: "Oleksandr Zinchenko", pos: "DF", club: "Arsenal", value: "35.0M", rawVal: 35000000 },
-      { name: "Georgiy Sudakov", pos: "MF", club: "Shakhtar Donetsk", value: "35.0M", rawVal: 35000000 },
-      { name: "Ilya Zabarnyi", pos: "DF", club: "Bournemouth", value: "32.0M", rawVal: 32000000 },
-      { name: "Mykhaylo Mudryk", pos: "FW", club: "Chelsea", value: "30.0M", rawVal: 30000000 },
-      { name: "Viktor Tsygankov", pos: "FW", club: "Girona", value: "30.0M", rawVal: 30000000 },
-      { name: "Andriy Lunin", pos: "GK", club: "Real Madrid", value: "25.0M", rawVal: 25000000 },
-      { name: "Anatoliy Trubin", pos: "GK", club: "Benfica", value: "22.0M", rawVal: 22000000 }
+      { name: "Alexander Isak", pos: "FW", club: "Newcastle", value: "75.0M", rawVal: 75000000 },
+      { name: "Viktor Gyökeres", pos: "FW", club: "Sporting CP", value: "70.0M", rawVal: 70000000 },
+      { name: "Dejan Kulusevski", pos: "FW", club: "Tottenham", value: "55.0M", rawVal: 55000000 },
+      { name: "Hugo Larsson", pos: "MF", club: "Eintracht Frankfurt", value: "28.0M", rawVal: 28000000 },
+      { name: "Victor Lindelöf", pos: "DF", club: "Man United", value: "15.0M", rawVal: 15000000 },
+      { name: "Ludwig Augustinsson", pos: "DF", club: "Anderlecht", value: "2.0M", rawVal: 2000000 },
+      { name: "Emil Krafth", pos: "DF", club: "Newcastle", value: "3.0M", rawVal: 3000000 },
+      { name: "Robin Olsen", pos: "GK", club: "Aston Villa", value: "1.5M", rawVal: 1500000 }
     ]
   },
   tunisia: {

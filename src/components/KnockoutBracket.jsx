@@ -312,7 +312,7 @@ export default function KnockoutBracket({
           >
             <img 
               src={`https://flagcdn.com/w40/${team.flag.toLowerCase()}.png`} 
-              alt={team.name[lang]} 
+              alt={team.name[lang] || team.name.en} 
               className="flag-img"
               onError={(e) => {
                 if (team.flag === 'gb-eng') e.target.src = 'https://flagcdn.com/w40/gb.png';
@@ -321,7 +321,7 @@ export default function KnockoutBracket({
                 else e.target.src = 'https://flagcdn.com/w40/un.png';
               }}
             />
-            <span className="match-team-name">{team.name[lang]}</span>
+            <span className="match-team-name">{team.name[lang] || team.name.en}</span>
             
             <button
               className="squad-info-trigger-btn"
